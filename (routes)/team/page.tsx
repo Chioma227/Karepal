@@ -3,18 +3,12 @@ import React from 'react'
 const TeamComponent = () => {
     return (
         <div id='team' className='pb-[20%]'>
-            <h2>Team</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam placeat sed
-                rerum eligendi dicta veritatis error voluptatum iusto laborum ipsa facere
-                in, amet, saepe harum totam? Cum blanditiis tenetur possimus sunt aut sed
-                repudiandae animi vel cupiditate sapiente molestias, nihil odit at molestiae
-                atque porro ducimus quisquam minima. Cupiditate rem nesciunt blanditiis sit
-                amet quisquam, quos aliquam, necessitatibus maiores nemo dolore in itaque
-                fugit a tenetur laudantium obcaecati quas magni aliquid. Quibusdam corporis
-                magnam ipsam facere assumenda doloremque nemo obcaecati non cumque quas aliquam
-                quaerat ipsum optio voluptates deleniti harum ipsa, voluptatem, pariatur omnis.
-                Unde nihil aliquid adipisci culpa quas?
-            </p>
+            <h2>Or Team</h2>
+            <h3>Meet the Brilliant Minds:</h3>
+            <p>Empower yourself with KarePal, your AI healthcare guide! Join millions on a journey to better health through interactive learning and personalized insights.</p>
+           <section>
+            
+           </section>
         </div>
     )
 }

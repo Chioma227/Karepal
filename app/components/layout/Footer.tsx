@@ -86,8 +86,11 @@ const Footer = () => {
                 </div>
                 {/* <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" /> */}
                 <div className="sm:flex sm:items-center sm:justify-between mt-16">
-                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024G <a href="https://flowbite.com/" className="hover:underline">Karepal</a>. All Rights Reserved.
+                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024G <a href="/" className="hover:underline">Karepal</a>. All Rights Reserved.
                     </span>
+                    <div>
+                        <small style={{color:"white"}}>Designed By <a href="" style={{color:"gray", textDecoration:"underline"}}>Mfoniso Ubokette</a> and developed By <a href="" style={{color:"gray", textDecoration:"underline"}}>Chioma Okeke</a></small>
+                    </div>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className="text-white hover:text-gray-900 dark:hover:text-gray-500 ms-5">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
