@@ -51,16 +51,16 @@ const Navbar = () => {
             </div>
             <div className={`${isOpen ? 'block' : 'hidden'} md:hidden transition-all`}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <Link href="/#home" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Home</Link>
-                    <Link href="/#service" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Our Service</Link>
-                    <Link href="/#about" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>About Us</Link>
-                    <Link href="/#team" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Our Team</Link>
-                    <Link href="/#review" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Reviews</Link>
-                    <Link href="/#contact" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Contact Us</Link>
+                    <Link onClick={toggleNavbar} href="/#home" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Home</Link>
+                    <Link onClick={toggleNavbar} href="/#service" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Our Service</Link>
+                    <Link onClick={toggleNavbar} href="/#about" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>About Us</Link>
+                    <Link onClick={toggleNavbar} href="/#team" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Our Team</Link>
+                    <Link onClick={toggleNavbar} href="/#review" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Reviews</Link>
+                    <Link onClick={toggleNavbar} href="/#contact" prefetch className='text-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>Contact Us</Link>
                 </div>
                 <div className="md:hidden flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" className="text-black bg-transparent border-[#2937B6] border font-medium rounded-lg text-sm px-4 py-2 text-center ml-[20px] mr-[10px]">Sign in</button>
-                    <button type="button" className="text-white bg-[#2937B6] font-medium rounded-lg text-sm px-4 py-2 text-center ">Sign up</button>
+                    <button onClick={toggleNavbar} type="button" className="text-black bg-transparent border-[#2937B6] border font-medium rounded-lg text-sm px-4 py-2 text-center ml-[20px] mr-[10px]">Sign in</button>
+                    <button onClick={toggleNavbar} type="button" className="text-white bg-[#2937B6] font-medium rounded-lg text-sm px-4 py-2 text-center ">Sign up</button>
                 </div>
             </div>
         </nav>
