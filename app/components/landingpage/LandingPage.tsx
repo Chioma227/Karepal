@@ -12,8 +12,8 @@ const LandingPage = () => {
   return (
     <div className='relative'>
       <HomeComponent />
-      <AboutComponent />
       <ServiceComponent />
+      <AboutComponent />
       <TeamComponent />
       <ReviewComponent />
       <ContactComponent />

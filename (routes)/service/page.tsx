@@ -1,21 +1,29 @@
 import React from 'react'
+import serviceData from '@/app/components/data/serviceData'
+import Image from 'next/image'
 
 const ServiceComponent = () => {
   return (
-    <div id='service'>
-       <h2>Service</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam placeat sed
-                rerum eligendi dicta veritatis error voluptatum iusto laborum ipsa facere
-                in, amet, saepe harum totam? Cum blanditiis tenetur possimus sunt aut sed
-                repudiandae animi vel cupiditate sapiente molestias, nihil odit at molestiae
-                atque porro ducimus quisquam minima. Cupiditate rem nesciunt blanditiis sit
-                amet quisquam, quos aliquam, necessitatibus maiores nemo dolore in itaque
-                fugit a tenetur laudantium obcaecati quas magni aliquid. Quibusdam corporis
-                magnam ipsam facere assumenda doloremque nemo obcaecati non cumque quas aliquam
-                quaerat ipsum optio voluptates deleniti harum ipsa, voluptatem, pariatur omnis.
-                Unde nihil aliquid adipisci culpa quas?
-            </p>
-    </div>
+    <section id='service' className=' mt-16'>
+      <div className='page'>
+        <h2 className='text-center'>Our Service</h2>
+        <p>Embark on a Health Journey Guided by KarePal, <br />
+         Your AI Medical Companion</p>
+      </div>
+      <section className='grid--layout'>
+        {serviceData.map((data, i) => {
+          return (
+            <article key={i} className='grid--layout__item'>
+              <div>
+                <Image src={data.icon} alt='icon' width={30} height={30} />
+              </div>
+              <h2>{data.title}</h2>
+              <p>{data.description}</p>
+            </article>
+          )
+        })}
+      </section>
+    </section>
   )
 }
 

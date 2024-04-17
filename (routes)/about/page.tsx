@@ -1,22 +1,29 @@
 import React from 'react'
+import Image from 'next/image'
+import aboutImg from "@/app/assets/imgs/aboutImg.svg"
 
 const AboutComponent = () => {
     return (
-        <div id='about'>
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam placeat sed
-                rerum eligendi dicta veritatis error voluptatum iusto laborum ipsa facere
-                in, amet, saepe harum totam? Cum blanditiis tenetur possimus sunt aut sed
-                repudiandae animi vel cupiditate sapiente molestias, nihil odit at molestiae
-                atque porro ducimus quisquam minima. Cupiditate rem nesciunt blanditiis sit
-                amet quisquam, quos aliquam, necessitatibus maiores nemo dolore in itaque
-                fugit a tenetur laudantium obcaecati quas magni aliquid. Quibusdam corporis
-                magnam ipsam facere assumenda doloremque nemo obcaecati non cumque quas aliquam
-                quaerat ipsum optio voluptates deleniti harum ipsa, voluptatem, pariatur omnis.
-                Unde nihil aliquid adipisci culpa quas?
-            </p>
-        </div>
+        <section id='about' className='home bg-[#001727] mt-16 text-white'>
+            <section className='about--container'>
+                <div className='imgSec'>
+                    <Image className='image' src={aboutImg} alt='about' width={100} height={100} />
+                </div>
+                <div className=' text-sec'>
+                <h2>About Us</h2>
+                <h4>
+                KarePal: Your AI medical companion, empowering informed health decisions.
+                </h4>
+                    <p>KarePal is your AI-powered health companion.  Confused by medical jargon? KarePal translates it into clear, easy-to-understand information.  Through interactive learning and personalized recommendations, KarePal empowers you to take charge of your health journey. </p>
+                    <p className='text-2'>KarePal is your partner in health, empowering you to take control of your <br /> well-being.</p>
+                    <button className='discover'>
+                        Discover More
+                    </button>
+                </div>
+            </section>
+        </section>
     )
 }
+
 
 export default AboutComponent
