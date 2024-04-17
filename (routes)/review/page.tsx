@@ -1,138 +1,67 @@
-import React from 'react'
+"use client"
+import reviewCarousel from '@/app/components/data/reviewCarousel'
+import React, { useState } from 'react'
 import Image from 'next/image'
-import reviewImg from "@/app/assets/imgs/Avatar (1).svg"
+import { AnimatePresence, motion } from 'framer-motion'
 
 const ReviewComponent = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isNextSlide, setIsNextSlide] = useState(false);
+
+    //move to next slide
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % reviewCarousel.length);
+    };
+    const prevSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide - 1) % reviewCarousel.length);
+    };
     return (
         <div id='review'>
-            {/* <!--Carousel--> */}
-            <div
-                id="carouselExampleCaptions"
-                className="relative"
-                data-twe-carousel-init
-                data-twe-carousel-slide>
-                <div
-                    className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-                    {/* <!--First Testimonial / Carousel item--> */}
-                    <div
-                        className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                        data-twe-carousel-active
-                        data-twe-carousel-item
-                        style={{ backfaceVisibility: "hidden" }}>
-                        <p
-                            className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-                            error amet numquam iure provident voluptate esse quasi, voluptas
-                            nostrum quisquam!"
+            <section className="carousel-sec flex items-center justify-center">
+                <button
+                    onClick={prevSlide}
+                    className="text-gray-900 bg-white font-extrabold rounded-[50%] bg-blackSecondary w-[35px] h-[35px] border-none"
+                >
+                    &lt;
+                </button>
+                <div className="flex items-center justify-center">
+                    <section className="mb-[18px] flex-1">
+                        <AnimatePresence mode="wait" initial={false}>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: 1,
+                                    transition: { type: "tween", duration: 2 },
+                                }}
+                                exit={{ opacity: 1 }}
+                            >
+                                <Image
+                                    src={reviewCarousel[currentSlide].img}
+                                    alt="user"
+                                    width={70}
+                                    height={70}
+                                    className="rounded-full"
+                                />
+                            </motion.div>
+                            <p className="font-semibold text-xtraSmall">
+                                {reviewCarousel[currentSlide].name}
+                            </p>
+                            <p>{reviewCarousel[currentSlide].role}</p>
+                        </AnimatePresence>
+                    </section>
+                    <section className='flex-1 w-[50%]'>
+                        <p className="mb-[18px] leading-[30px] ">
+                            {reviewCarousel[currentSlide].review}
                         </p>
-                        <div className="mb-6 mt-12 flex justify-center">
-                            <Image
-                                width={200}
-                                height={200}
-                                src={reviewImg}
-                                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                                alt="smaple image" />
-                        </div>
-                        <p className="text-neutral-500 dark:text-neutral-300">- Anna Morian</p>
-                    </div>
-
-                    {/* <!--Second Testimonial / Carousel item--> */}
-                    <div
-                        className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                        data-twe-carousel-item
-                        style={{ backfaceVisibility: "hidden" }}>
-                        <p
-                            className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-                            "Neque cupiditate assumenda in maiores repudiandae mollitia
-                            adipisci maiores repudiandae mollitia consectetur adipisicing
-                            architecto elit sed adipiscing elit."
-                        </p>
-                        <div className="mb-6 mt-12 flex justify-center">
-                            <Image
-                                width={200}
-                                height={200}
-                                src={reviewImg}
-                                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                                alt="smaple image" />
-                        </div>
-                        <p className="text-neutral-500 dark:text-neutral-300">- Teresa May</p>
-                    </div>
-
-                    {/* <!--Third Testimonial / Carousel item--> */}
-                    <div
-                        className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                        data-twe-carousel-item
-                        style={{ backfaceVisibility: "hidden" }}>
-                        <p
-                            className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-                            "Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur est laborum neque
-                            cupiditate assumenda in maiores."
-                        </p>
-                        <div className="mb-6 mt-12 flex justify-center">
-                            <Image
-                                width={200}
-                                height={200}
-                                src={reviewImg}
-                                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                                alt="smaple image" />
-                        </div>
-                        <p className="text-neutral-500 dark:text-neutral-300">- Kate Allise</p>
-                    </div>
+                    </section>
                 </div>
-
-                {/* <!--Carousel Controls - prev item--> */}
                 <button
-                    className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none dark:text-white dark:opacity-50 dark:hover:text-white dark:focus:text-white"
-                    type="button"
-                    data-twe-target="#carouselExampleCaptions"
-                    data-twe-slide="prev">
-                    <span className="inline-block h-8 w-8">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            className="h-6 w-6">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>
-                    </span>
-                    <span
-                        className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                    >Previous</span
-                    >
+                    onClick={nextSlide}
+                    className="text-gray-900 bg-white ml-[7px]  font-extrabold rounded-[50%] bg-blackSecondary w-[35px] h-[35px] border-none"
+                >
+                    &gt;
                 </button>
-                {/* <!--Carousel Controls - next item--> */}
-                <button
-                    className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none dark:text-white dark:opacity-50 dark:hover:text-white dark:focus:text-white"
-                    type="button"
-                    data-twe-target="#carouselExampleCaptions"
-                    data-twe-slide="next">
-                    <span className="inline-block h-8 w-8">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            className="h-6 w-6">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </span>
-                    <span
-                        className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                    >Next</span
-                    >
-                </button>
-            </div>
-
+            </section>
         </div>
     )
 }

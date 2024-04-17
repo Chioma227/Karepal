@@ -219,6 +219,16 @@ input {
   top: 2px;
 }
 
+#preview{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+}
+.carousel-sec{
+  width: 70%;
+}
+
 @media screen and (max-width: 1071px) {
   .grid--layout {
     grid-template-columns: repeat(3, 1fr);
