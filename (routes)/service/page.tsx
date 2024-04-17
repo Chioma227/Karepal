@@ -6,7 +6,7 @@ import { FaStethoscope } from "react-icons/fa6";
 
 const ServiceComponent = () => {
   return (
-    <section id='service' className=' mt-16'>
+    <section id='service'>
       <div className='page'>
         <h2 className='text-center'>Our Service</h2>
         <p>Embark on a Health Journey Guided by KarePal, <br />

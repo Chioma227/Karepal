@@ -88,7 +88,7 @@ const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between mt-16">
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024G <a href="/" className="hover:underline">Karepal</a>. All Rights Reserved.
                     </span>
-                    <div>
+                    <div className='md:mt-0 mt-[15px] md:mb-0 mb-[10px]'>
                         <small style={{color:"white"}}>Designed By <a href="https://www.linkedin.com/in/mfoniso-ibokette-a85772267/" style={{color:"gray", textDecoration:"underline"}}>Mfoniso Ibokette</a> and developed By <a href="https://www.linkedin.com/in/chioma-okeke-a7823b237/" style={{color:"gray", textDecoration:"underline"}}>Chioma Okeke</a></small>
                     </div>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">

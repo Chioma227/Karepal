@@ -5,7 +5,6 @@ import AboutComponent from '@/(routes)/about/page'
 import ReviewComponent from '@/(routes)/review/page'
 import ServiceComponent from '@/(routes)/service/page'
 import ContactComponent from '@/(routes)/contact/page'
-import Navbar from '../layout/Nav'
 
 
 const LandingPage = () => {
@@ -15,8 +14,8 @@ const LandingPage = () => {
       <ServiceComponent />
       <AboutComponent />
       <TeamComponent />
-      <ReviewComponent />
       <ContactComponent />
+      <ReviewComponent />
     </div>
   )
 }
