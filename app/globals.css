@@ -246,6 +246,15 @@ input {
   margin: 0 60px;
   border-radius: 10px;
 }
+#review > div:nth-child(1) {
+  text-align: center;
+}
+#review > div:nth-child(1) h2 {
+  font-weight: 700;
+  font-size: 35px;
+  color: #2937b6;
+  margin: 10px 0;
+}
 .arrow-left,
 .arrow-right {
   background-color: rgb(255, 252, 246);
@@ -279,11 +288,14 @@ input {
 .user-text ~ div:nth-child(1) {
   font-size: 25px;
 }
-.user-sec > div  {
+.user-sec > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
+.user-sec small {
+  color: #2937b6;
+}
 
 @media screen and (max-width: 1071px) {
   .grid--layout {
@@ -333,7 +345,6 @@ input {
   }
   .user-text {
     width: 100%;
-
   }
   .user-sec > div img {
     width: 200px;
@@ -345,6 +356,9 @@ input {
     box-shadow: 5px 5px 13px -5px rgba(0, 0, 0, 0.4);
     padding: 10px 7px;
     border-radius: 6px;
+    font-size: 10px;
+  }
+  .disabled {
     font-size: 10px;
   }
 }

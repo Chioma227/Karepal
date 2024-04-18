@@ -65,7 +65,7 @@ const ReviewComponent = () => {
                             <p className="font-semibold text-xtraSmall">
                                 {reviewCarousel[currentSlide].name}
                             </p>
-                            <p>{reviewCarousel[currentSlide].role}</p>
+                            <small>{reviewCarousel[currentSlide].role}</small>
                         </AnimatePresence>
                     </section>
                     <section className='user-text'>
