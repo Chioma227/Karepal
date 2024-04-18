@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Image from 'next/image'
 import Link from 'next/link';
 
+
 const TeamComponent = () => {
     return (
         <div id='team' className='pb-[20%]'>
@@ -17,7 +18,7 @@ const TeamComponent = () => {
                     return (
                         <div key={i} className='item'>
                             <div>
-                                <Image src={data.img} alt='' width={90} height={90} />
+                                <Image src={data.img} alt='user' width={90} height={90} />
                             </div>
                             <h1>{data.name}</h1>
                             <h2>{data.profession}</h2>

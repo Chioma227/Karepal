@@ -175,6 +175,7 @@ p {
   color: gray;
 }
 #contact {
+  margin-top: 30px;
   background-image: url("/app/assets/imgs/bg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -205,6 +206,7 @@ input {
   border-radius: 5px;
   outline: none;
   text-indent: 5px;
+  font-family: sans-serif;
   width: 450px;
 }
 .newsletter-btn {
@@ -215,19 +217,73 @@ input {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   position: absolute;
+  font-family: sans-serif;
   right: 2px;
   top: 2px;
 }
 
-#preview{
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100%;
+#review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 40px 50px;
+  flex-direction: column;
+  gap: 30px;
 }
-.carousel-sec{
-  width: 70%;
+.carousel-sec {
+  width: 100%;
 }
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  gap: 30px;
+  border: 1px solid rgba(239, 239, 239, 0.608);
+  box-shadow: 5px 9px 13px -7px rgba(0, 0, 0, 0.2);
+  margin: 0 60px;
+  border-radius: 10px;
+}
+.arrow-left,
+.arrow-right {
+  background-color: rgb(255, 252, 246);
+  box-shadow: 5px 5px 13px -5px rgba(0, 0, 0, 0.4);
+  padding: 10px 7px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: rgb(255, 247, 230);
+  box-shadow: 5px 5px 13px -5px rgba(0, 0, 0, 0.523);
+}
+.user-sec > div img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.disabled {
+  opacity: 40%;
+  cursor: not-allowed;
+  background-color: rgb(255, 252, 246);
+  box-shadow: 5px 5px 13px -5px rgba(0, 0, 0, 0.4);
+  padding: 10px 7px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+.user-text {
+  width: 50%;
+}
+.user-text ~ div:nth-child(1) {
+  font-size: 25px;
+}
+.user-sec > div  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
 @media screen and (max-width: 1071px) {
   .grid--layout {
@@ -269,6 +325,27 @@ input {
   .hero-text > p {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .testimonial {
+    display: block;
+    padding: 15px;
+    margin: 0 10px;
+  }
+  .user-text {
+    width: 100%;
+
+  }
+  .user-sec > div img {
+    width: 200px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    background-color: rgb(255, 252, 246);
+    box-shadow: 5px 5px 13px -5px rgba(0, 0, 0, 0.4);
+    padding: 10px 7px;
+    border-radius: 6px;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -323,6 +400,9 @@ input {
     height: fit-content;
     padding: 30px 20px;
     margin-top: 20px;
+  }
+  #review {
+    padding: 30px 20px;
   }
   .grid--layout {
     grid-template-columns: repeat(1, 1fr);
